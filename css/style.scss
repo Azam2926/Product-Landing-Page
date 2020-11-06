@@ -1,0 +1,41 @@
+$primaryColor: #975;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color:$primaryColor;
+  color: white;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  /*height: 50px;*/
+  display: flex;
+  justify-content: space-between;
+}
+
+header #header-img {
+  width: 15%;
+}
+ 
+
+#nav-bar ul {
+  display: flex;
+  list-style: none;
+
+}
+
+main {
+  margin-top: 100px;
+}
+
+@media screen {
+  body {
+    background-color: #eee;
+  }
+}

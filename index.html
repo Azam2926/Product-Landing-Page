@@ -3,36 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Product Landing Page</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #555;
-            color: white;
-        }
-
-        header {
-            position: fixed;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
     <header id="header">
-        <img src="" alt="header image" id="header-img">
+        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="header image" id="header-img">
         <nav id="nav-bar">
             <ul>
-                <li class="nav-link">
+                <li>
                     <a class="nav-link" href="#home">Home</a>
                 </li>
-                <li class="nav-link">
+                <li>
                     <a class="nav-link" href="#feature">Feature</a>
                 </li>
-                <li class="nav-link">
+                <li>
                     <a class="nav-link" href="#about">About</a>
                 </li>
             </ul>
@@ -42,23 +27,24 @@
     <main>
         <form action="https://www.freecodecamp.com/email-submit" id="form">
             <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Enter email">
+            <input type="email" name="email" id="email" placeholder="Enter email">
             <input type="submit" value="Submit" id="submit">
         </form>
 
         <section id="home">
             home
         </section>
-           
+
         <section id="feature">
             feature
         </section>
-            
+
         <section id="about">
             about
         </section>
-
+        <section id="video-detail">
+            <video controls src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"></video>
+        </section>
     </main>
-<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
