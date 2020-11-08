@@ -19,19 +19,66 @@
         header {
             position: fixed;
             top: 0;
+            width: 100vw;
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            min-height: 70px;
+            background-color: darkgoldenrod;
         }
         header #header-img {
-            width: 15%;
+            width: 220px;
         }
-        header #nav-bar ul {
+        #nav-bar ul {
             display: flex;
             list-style: none;
         }
 
+        #nav-bar li {
+            margin: 0 50px;
+        }
+
+        #nav-bar a {
+            text-decoration: none;
+            color: white;
+        }
+
         main {
             margin-top: 100px;
+        }
+
+        main .feedback {
+            text-align: center;
+        }
+        main form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 120px;
+        }
+
+        .form-node {
+            position: relative;
+            color: white;
+        }
+
+        .form-node input {
+            border: none;
+            border-bottom: 1px aqua solid;
+            height: 50px;
+            padding: 15px 0 0 0;
+            width: 100%;
+            background-color: transparent;
+        }
+        .form-node label {
+            font-family: Roboto Medium, sans-serif;
+            font-size: 14px;
+            position: absolute;
+            top: 3px;
+            left: 0;
+            opacity: 0.7;
+            font-weight: lighter;
         }
 
         @media screen {
@@ -39,8 +86,6 @@
                 background-color: #225;
             }
         }
-
-        /*# sourceMappingURL=style.css.map */
 
     </style>
 </head>
@@ -64,12 +109,16 @@
     </header>
 
     <main>
-        <form action="https://www.freecodecamp.com/email-submit" id="form">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="Enter email">
-            <input type="submit" value="Submit" id="submit">
-        </form>
-
+        <section class="feedback">
+            <h1>Get weekly news</h1>
+            <form action="https://www.freecodecamp.com/email-submit" id="form">
+                <div class="form-node">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="Enter email" required>
+                </div>
+                <input type="submit" value="Submit" id="submit">
+            </form>
+        </section>
         <section id="home">
             home
         </section>
