@@ -25,10 +25,15 @@
             align-items: center;
             min-height: 70px;
             background-color: darkgoldenrod;
+            z-index: 1;
         }
+
         header #header-img {
-            width: 220px;
+            width: 80px;
+            min-width: 80px;
+            margin-left: 50px;
         }
+
         #nav-bar ul {
             display: flex;
             list-style: none;
@@ -45,11 +50,14 @@
 
         main {
             margin-top: 100px;
+            display: flex;
+            flex-direction: column;
         }
 
-        main .feedback {
+        main #feedback {
             text-align: center;
         }
+
         main form {
             display: flex;
             flex-direction: column;
@@ -71,6 +79,7 @@
             width: 100%;
             background-color: transparent;
         }
+
         .form-node label {
             font-family: Roboto Medium, sans-serif;
             font-size: 14px;
@@ -79,6 +88,35 @@
             left: 0;
             opacity: 0.7;
             font-weight: lighter;
+        }
+
+        main #home, #feature, #about, #video-detail {
+            padding: 50px;
+        }
+
+        main #feature {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #feature .features {
+            display: flex;
+            padding: 20px 0;
+        }
+
+        .features .name {
+            width: 25vw;
+        }
+
+        .features .description {
+            width: 80vw;
+        }
+
+        main #video-detail {
+            text-align: center;
+            width: 50px;
+            height: 50px;
+            justify-self: center;
         }
 
         @media screen {
@@ -91,48 +129,95 @@
 </head>
 <body>
 
-    <header id="header">
-        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="header image" id="header-img">
-        <nav id="nav-bar">
-            <ul>
-                <li>
-                    <a class="nav-link" href="#home">Home</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="#feature">Feature</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="#about">About</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+<header id="header">
+    <img src="./tuit.png" alt="header image" id="header-img">
+    <nav id="nav-bar">
+        <ul>
+            <li>
+                <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#feature">Feature</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#about">About</a>
+            </li>
+        </ul>
+    </nav>
+</header>
 
-    <main>
-        <section class="feedback">
-            <h1>Get weekly news</h1>
-            <form action="https://www.freecodecamp.com/email-submit" id="form">
-                <div class="form-node">
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" id="email" placeholder="Enter email" required>
-                </div>
-                <input type="submit" value="Submit" id="submit">
-            </form>
-        </section>
-        <section id="home">
-            home
-        </section>
+<main>
+    <section id="feedback">
+        <h1>Get weekly news</h1>
+        <form action="https://www.freecodecamp.com/email-submit" id="form">
+            <div class="form-node">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Enter email">
+            </div>
+            <input type="submit" value="Submit" id="submit">
+        </form>
+    </section>
+    <section id="home">
+        Tashkent University of Information Technologies (former Tashkent Electrotechnical Institute of Communications)
+        was founded in 1955. On May 30, 2002, in accordance with the Decree № 3080 of the President of the Republic of
+        Uzbekistan it was renamed into the Tashkent University of Information Technology. On June 2, 2005, according to
+        the resolution № 91 by the President of the Republic of Uzbekistan regional branches of TUIT were formed in
+        Karshi, Samarkand, Urgench and Fergana cities.
+    </section>
 
-        <section id="feature">
-            feature
-        </section>
+    <section id="feature">
+        <div class="features">
+            <div class="name">Research</div>
+            <div class="description">
+                - We provide a general overview of interesting and practice-oriented data. The widest range of our
+                disciplines and the development of future scientific conversations and interdepartmental research and
+                relationships with our partners.
+            </div>
+        </div>
 
-        <section id="about">
-            Oddiy about
-        </section>
-        <section id="video-detail">
-            <video controls src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"></video>
-        </section>
-    </main>
+        <div class="features">
+            <div class="name">Education</div>
+            <div class="description">
+                - Tashkent University of Information Technologies named after Muhammad al-Khwarizmi is an educational
+                institution that provides students with the academic knowledge necessary for their development as a
+                high-qualified specialists. The wide range of subjects offered by the Tashkent University of Information
+                Technologies named after Muhammad al-Khwarizmi provides students with inter-university education, which
+                reflects the social and global mission of the university.
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="name">Providing practice-oriented knowledge</div>
+            <div class="description">
+                – We support the exchange of knowledge and technology between the university and the internship. We form
+                strategic alliances with companies, universities and extracurricular research institutes. We encourage
+                innovation through spin-offs and help members of the Tashkent University of Information Technology named
+                after Muhammad al-Khwarizmi to set up companies. We hold public discussions as a part of the regional
+                and national branch and maintain our relationships with graduates.
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        Thanks to international cooperation in recent years, there 16 teaching laboratories, 9 computer classrooms, 4
+        education centers: the Uzbek-Indian Center of Information Technologies, Uzbek-Korean Center for Information
+        Technologies, "Plaza" Uzbek-Korean Center, regional academic center "CISCO" have been formed. Indian
+        Uzbek-Indian center of Information Technologies after the name J.Neru has been modernized with the grant funds
+        of 500 thousand US dollars.
+
+        University’s multimedia classes equipped with a View Sonic interactive projector and modern tools.
+
+        On December 14-22, 2015, the delegation consisting of the directors of two regional branches of the university
+        and the head of the International Relations Department visited the Seoul National University in South Korea. The
+        main purpose of the visit was to participate in an international conference and event held to celebrate the 10th
+        anniversary of cooperation between the CMU and TATU. At the conference TUIT delegation and SMU students trained
+        in the Masters and Doctorate degree, presented the thesis presentation about current activities of TUIT and its
+        filial branches. In addition, two professors of TUIT gave online presentation on their research projects in the
+        form of a video conference.
+    </section>
+    <section id="video-detail">
+        <iframe  width="853" height="480" src="https://www.youtube.com/embed/5_4XHVCW9Fg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+</main>
 </body>
 </html>
